@@ -130,6 +130,8 @@ To augment the data sat, I also flipped images and angles thinking that this wou
 
 After the collection process, I had 9,897 data points, each with 3 images (center, left, right), all of which were doubled.  The left and right images were used with a slight steering  correction angle of +/- 0.2 degrees.  With 20% of the total images taken for validation, this resulted in 59,382 samples for training.
 
+In order to deal with the very large amount of data, I implmented a generator to reduce the amount of data needing to be in memory during model training.
+
 Prior to submitting to model (which included it's own normalization/centering pre-processing), I trimmed the top and bottom from the images to reduce the amount of "noise" that would not likely have improved results:
 
 ![alt text][img_cropped]
